@@ -6,9 +6,21 @@
     tools:context="com.example.android.unit4assessment.DisplayFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <FrameLayout
+        android:layout_gravity="top"
+        android:id="@+id/topFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="255dp">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bottomFrament"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_gravity="bottom">
+
+    </FrameLayout>
 
 </FrameLayout>
