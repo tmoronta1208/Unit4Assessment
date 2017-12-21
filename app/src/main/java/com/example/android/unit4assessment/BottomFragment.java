@@ -32,7 +32,7 @@ public class BottomFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Books
+
         JSONObject jsonObject = new JSONObject();
 
         try {
@@ -74,13 +74,41 @@ public class BottomFragment extends Fragment {
         }
 
 
+
+        BooksListAdapter booksListAdapter = new BooksListAdapter(returnList(jsonObject));
+
         rootView = inflater.inflate(R.layout.fragment_bottom, container, false);
 
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView_layout);
 
-        BooksListAdapter booksListAdapter = new BooksListAdapter();
-       // LinearLayoutManager
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+        recyclerView.setAdapter(booksListAdapter);
 
         return rootView;
+    }
+
+    private List<Books> returnList(JSONObject jsonObject){
+        List<Books> books = new ArrayList<>();
+
+        String jsonString = jsonObject.toString();
+        try {
+            JSONObject oldStuff = new JSONObject(jsonString);
+            JSONArray bookArray = oldStuff.getJSONArray("books");
+
+            for (int i = 0; i < bookArray.length() ; i++) {
+
+
+                books.setAuthor((String) bookArray.getJSONObject(i).get("author"));
+                books.setTitle((String) bookArray.getJSONObject(i).get("title"));
+                books.setYear((String) bookArray.getJSONObject(i).get("year"));
+
+
+            }
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return  books;
+
     }
 }

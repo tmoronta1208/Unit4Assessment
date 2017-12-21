@@ -4,10 +4,23 @@
     android:layout_height="match_parent"
     tools:context="com.example.android.unit4assessment.TopFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:text="Title"
+        android:id="@+id/title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
         />
-
+    <TextView
+        android:text="Author"
+        android:id="@+id/author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+     <TextView
+         android:text="Year"
+         android:id="@+id/year"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="bottom"/>
 </FrameLayout>
