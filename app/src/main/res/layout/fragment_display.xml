@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.unit4assessment.DisplayFragment">
+    tools:context="com.example.android.unit4assessment.fragments.DisplayFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -16,7 +16,7 @@
     </FrameLayout>
 
     <FrameLayout
-        android:id="@+id/bottomFrament"
+        android:id="@+id/bottomFragment"
         android:layout_width="match_parent"
         android:layout_height="255dp"
         android:layout_gravity="bottom">
