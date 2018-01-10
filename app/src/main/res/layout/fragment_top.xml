@@ -2,23 +2,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.unit4assessment.TopFragment">
+    tools:context="com.example.android.unit4assessment.fragments.TopFragment">
 
     <TextView
-        android:text="Title"
-        android:id="@+id/title"
+        android:text="title"
+        android:id="@+id/itemview_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         />
     <TextView
-        android:text="Author"
+        android:text="author"
         android:id="@+id/author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"/>
      <TextView
-         android:text="Year"
+         android:text="year"
          android:id="@+id/year"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
